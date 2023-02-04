@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MultiplicationTable
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Programe Test Multiplication Number//
+            int num;
+            int result;
+
+            Console.Write("Input Multiplication Table Number : ");
+            int.TryParse(Console.ReadLine(), out num);
+
+            Console.WriteLine("\nMultiplication is {0} table.", num);
+
+            for (int i = 1; i <= num; i++)
+            {
+                Console.WriteLine("\nMultiplication number : {0}", i);
+                for (int j = 1; j <= 12; j++)
+                {
+                    result = i * j;
+                    Console.WriteLine("{0} x {1} = {2}", i, j, result);
+                }
+            }
+
+            Console.WriteLine("Success Programe");
+            Console.ReadKey();
+        }
+    }
+}
